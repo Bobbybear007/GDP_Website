@@ -1,0 +1,231 @@
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+header {
+    background-color: #ff4757; /* Vibrant red */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-top: 20px; /* Add some space at the top if needed */
+}
+
+@media (max-width: 768px) {
+    .banner img {
+        max-height: 200px; /* Adjust for smaller screens */
+    }
+}
+
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure full width */
+}
+
+.content-section2 {
+    position: relative;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 204, 255, 0.1);
+    max-width: 800px; /* Limit the width for better readability */
+    width: 100%; /* Ensure it takes up the full width */
+}
+
+.content-section2 img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Set a maximum width for the image */
+    margin: 0 auto 20px; /* Center the image and add some space at the bottom */
+    display: block; /* Make sure the image is displayed as a block element */
+    border-radius: 10px; /* Add rounded corners if desired */
+}
+
+@media (max-width: 768px) {
+    .content-section2 img {
+        max-width: 100%; /* Ensure the image is responsive on smaller screens */
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.874); /* Semi-transparent black for readability */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#logo {
+    width: 200px; /* Adjust the size as needed */
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Reduce padding for smaller button */
+    background-color: #ffcc00; /* Golden yellow */
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 15px; /* Reduce margin-top */
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite; /* Apply bounce animation to the button */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Reduced bounce height for the button */
+    }
+}
+
+.btn:hover {
+    background-color: #ff9900; /* Darker yellow on hover */
+}
+
+.content-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 204, 255, 0.1);
+    max-width: 800px; /* Limit the width for better readability */
+    width: 100%; /* Ensure it takes up the full width */
+}
+
+.jam-box {
+    padding: 20px;
+    background-color: #87dbaa; /* Semi-transparent white for readability */
+    margin: 20px 0; /* Space between boxes */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 204, 255, 0.1);
+    max-width: 700px; /* Limit the width for better readability */
+    width: 100%; /* Ensure it takes up the full width */
+    text-align: left; /* Align text to the left */
+}
+
+.jam-box h3 {
+    color: #004080; /* Dark blue for section headings */
+    margin-top: 0; /* Remove default margin-top */
+}
+
+.jam-box p {
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.jam-box .btn {
+    margin: 20px 0 0; /* Add margin to position button */
+}
+
+.jam-banner {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover; /* Ensure the image covers the container */
+    max-height: 300px; /* Set a max height to prevent excessive image height */
+}
+
+footer {
+    background-color: #2ed573; /* Vibrant green */
+    color: #fff; /* White for footer text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00; /* Golden yellow for hover effect */
+    color: #333;
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+h1 {
+    color: #ffcc00; /* Golden yellow for main headings */
+    font-size: 3em;
+    animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+    0% { color: #ffcc00; }
+    50% { color: #ff4757; }
+    100% { color: #ffcc00; }
+}
+
+h2 {
+    color: #004080; /* Dark blue for section headings */
+}
+
+p {
+    color: #333; /* Default dark text for readability */
+}
